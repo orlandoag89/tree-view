@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    ul,
+    li,
+    ol {
+      list-style: none;
+    }
+
+    .container {
+      width: 100%;
+    }
+
+    .parent {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .parent li {
+      display: flex;
+    }
+
+    .parent li a {
+      text-decoration: none;
+      padding: 10px;
+      background: black;
+      color: white;
+      margin: 2px;
+    }
+
+    .parent li a:hover {
+      border: .5px solid black;
+      background: white;
+      color: black;
+    }
+
+    /* .parent li ul {
+      display: none;
+    } */
+
+    .hidden {
+      display: none;
+    }
+
+    /* .parent li:hover>ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    } */
+  </style>
+
+
+</head>
+
+<body>
+  <div class="container">
+    <ul class="parent">
+      <li><a href="#">Parent1</a></li>
+      <li><a href="#">Parent2</a>
+        <ul>
+          <li><a href="#">Item1</a></li>
+          <li><a href="#">Item2</a></li>
+          <li><a href="#">Item3</a>
+            <ul>
+              <li><a href="#">Item3.1</a></li>
+              <li><a href="#">Item3.2</a></li>
+              <li><a href="#">Item3.3</a>
+                <ul>
+                  <li><a href="#">Item3.3.1</a>
+                    <ul>
+                      <li><a href="#">Item3.3.1.1</a></li>
+                      <li><a href="#">Item3.3.2.2</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Item3.3.2</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Item3.4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Item4</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Parent3</a></li>
+      <li><a href="#">Parent4</a>
+        <ul>
+          <li><a href="#">Item1</a></li>
+          <li><a href="#">Item2</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <script src="./src/utilities/add-and-remove-class.js"></script>
+  <script>
+    (() => {
+      const objAddRemove = new AddAndRemoveClass();
+      // objAddRemove.setHiddenParents();
+      objAddRemove.setHiddenChildrens();
+      objAddRemove.removeHiddenChildren();
+      objAddRemove.removeHiddenParents();
+    })();
+  </script>
+</body>
+
+</html>
