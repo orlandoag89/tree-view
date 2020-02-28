@@ -41,28 +41,23 @@
       color: black;
     }
 
-    /* .parent li ul {
-      display: none;
-    } */
-
     .hidden {
       display: none;
     }
 
-    /* .parent li:hover>ul {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    } */
+    .presentation-data {
+      width: 100%;
+    }
   </style>
-
 
 </head>
 
 <body>
   <div class="container">
+
     <ul class="parent">
-      <li><a href="#">Parent1</a></li>
+      <li><a href="https://lit-element.polymer-project.org/guide/lifecycle#update" target="_blank" disabled>Parent1</a>
+      </li>
       <li><a href="#">Parent2</a>
         <ul>
           <li><a href="#">Item1</a></li>
@@ -88,7 +83,8 @@
           <li><a href="#">Item4</a></li>
         </ul>
       </li>
-      <li><a href="#">Parent3</a></li>
+      <li><a href="https://polymer-library.polymer-project.org/2.0/docs/devguide/shadow-dom" target="_blank">Parent3</a>
+      </li>
       <li><a href="#">Parent4</a>
         <ul>
           <li><a href="#">Item1</a></li>
@@ -97,11 +93,14 @@
       </li>
     </ul>
   </div>
+  <section class="container-data" id="section">
+    <object class="presentation-data" id="iFrm" data=""></object>
+  </section>
   <script src="./src/utilities/add-and-remove-class.js"></script>
   <script>
     (() => {
       const objAddRemove = new AddAndRemoveClass();
-      // objAddRemove.setHiddenParents();
+      objAddRemove.setHiddenParents();
       objAddRemove.setHiddenChildrens();
       objAddRemove.removeHiddenChildren();
       objAddRemove.removeHiddenParents();

@@ -3,6 +3,22 @@
  */
 class AddAndRemoveClass {
 
+  get parents() {
+    return this.getArray(document.querySelectorAll('.parent > li'));
+  }
+
+  get childrens() {
+    return this.getArray(document.querySelectorAll('li > ul > li'));
+  }
+
+  get section() {
+    return document.querySelector('section');
+  }
+
+  get iframe() {
+    return document.querySelector('#iFrm');
+  }
+
   getArray(expression) {
     return Array.from(expression);
   }
@@ -16,14 +32,19 @@ class AddAndRemoveClass {
   }
 
   removeHiddenClasFromUL(array) {
-    array.map(value => {
-      console.log(value);
-      if (value.tagName === 'UL') {
-        value.classList.remove('hidden');
-      } else {
-        console.log('No tiene hijos');
+    const arrayFromTags = array.map(tag => {
+      if (tag.tagName === 'UL') {
+        tag.classList.toggle('hidden');
       }
+      return tag.tagName;
     });
+    let includesUl = arrayFromTags.includes('UL');
+    if (!includesUl) {
+      let href = array.map(val => {
+        return val.href;
+      })[0];
+      this.iframe.data = href;
+    }
   }
 
   hidden(array) {
@@ -34,44 +55,33 @@ class AddAndRemoveClass {
   }
 
   show(array) {
-    let tagsInArray = array.map(tag => {
+    array.map(tag => {
       return this.getArray(tag.children);
     }).map(children => {
       children.map(liOrUl => {
         if (liOrUl.tagName === 'A') {
           liOrUl.addEventListener('click', evt => {
+            evt.preventDefault();
             this.removeHiddenClasFromUL(children);
           });
         }
       });
     });
-
-
-    // array.map(value => {
-    //   value.addEventListener('click', e => {
-    //     const tmp = this.getArray(value.children);
-    //     this.removeHiddenClasFromUL(tmp);
-    //   });
-    // });
   }
 
   setHiddenParents() {
-    const parents = this.getArray(document.querySelectorAll('.parent > li'));
-    this.hidden(parents);
+    this.hidden(this.parents);
   }
 
   setHiddenChildrens() {
-    const lis = this.getArray(document.querySelectorAll('li > ul > li'));
-    this.hidden(lis);
+    this.hidden(this.childrens);
   }
 
   removeHiddenChildren() {
-    const parents = this.getArray(document.querySelectorAll('li > ul > li'));
-    this.show(parents);
+    this.show(this.childrens);
   }
 
   removeHiddenParents() {
-    const parents = this.getArray(document.querySelectorAll('.parent > li'));
-    this.show(parents);
+    this.show(this.parents);
   }
 }
