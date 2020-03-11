@@ -6,10 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
-  <tree-view></tree-view>
+  <!-- <tree-view></tree-view> -->
+  <gft-tree-view parentId="parent">
+    <div slot="gft-tree-view">
+      <ul id="parent">
+        <li><a href="https://lit-element.polymer-project.org/guide/lifecycle#update">Parent1</a>
+        </li>
+        <li><a href="#">Parent2</a>
+          <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a>
+              <ul>
+                <li><a href="#">Item3.1</a></li>
+                <li><a href="#">Item3.2</a></li>
+                <li><a href="#">Item3.3</a>
+                  <ul>
+                    <li><a href="#">Item3.3.1</a>
+                      <ul>
+                        <li><a href="#">Item3.3.1.1</a></li>
+                        <li><a href="#">Item3.3.2.2</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Item3.3.2</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Item3.4</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Item4</a></li>
+          </ul>
+        </li>
+        <li><a href="https://polymer-library.polymer-project.org/2.0/docs/devguide/shadow-dom"
+            target="_blank">Parent3</a>
+        </li>
+        <li><a href="#">Parent4</a>
+          <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </gft-tree-view>
   <script src="./src/index.js" type="module"></script>
 </body>
 
