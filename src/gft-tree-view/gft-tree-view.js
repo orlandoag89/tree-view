@@ -39,7 +39,7 @@ export class GftTreeView extends LitElement {
   }
 
   get children() {
-    return Array.from(document.querySelectorAll('li > ul > li'));
+    return Array.from(document.querySelectorAll(this.parentMain + ' li > ul > li'));
   }
 
   get object() {
@@ -51,6 +51,7 @@ export class GftTreeView extends LitElement {
     if (this.validateProperty(this.parentId)) {
       output = '#' + this.parentId;
     } else if (this.validateProperty(this.parentClass)) {
+      console.error('Atention', 'If you use a class can be that others tags have been affect');
       output = '.' + this.parentClass;
     }
     return output;

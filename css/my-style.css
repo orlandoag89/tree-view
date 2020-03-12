@@ -1,0 +1,31 @@
+ul,
+li,
+ol {
+  list-style: none;
+}
+.parent {
+  background: red;
+  display: flex;
+  flex-direction: column;
+}
+
+.parent li {
+  display: flex;
+  background: #4e94ab;
+  padding: 3px;
+  width: 97%;
+}
+
+.parent li a {
+  text-decoration: none;
+  padding: 10px;
+
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  
+  color: white;
+}
+
+.parent li a:hover {
+  background: rgba(0,0,0,.3);
+}

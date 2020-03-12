@@ -6,58 +6,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <style>
-    .hidden {
-      display: none;
-    }
-  </style>
+  <link rel="stylesheet" href="css/my-style.css">
 </head>
 
 <body>
   <!-- <tree-view></tree-view> -->
-  <gft-tree-view parentId="parent">
+  <gft-tree-view parentid="parent">
     <div slot="gft-tree-view">
-      <ul id="parent">
-        <li><a href="https://lit-element.polymer-project.org/guide/lifecycle#update">Parent1</a>
+      <ul id="parent" class="parent">
+        <li><a href="https://devcode.la/tutoriales/unidades-vh-vw-css/">vh & vw</a>
         </li>
-        <li><a href="#">Parent2</a>
+        <li><a href="#">LitElement</a>
           <ul>
-            <li><a href="#">Item1</a></li>
-            <li><a href="#">Item2</a></li>
-            <li><a href="#">Item3</a>
+            <li><a href="https://lit-element.polymer-project.org/guide">Introducction</a></li>
+            <li><a href="https://lit-element.polymer-project.org/guide/start">Getting Started</a></li>
+            <li><a href="#">Writing components</a>
               <ul>
-                <li><a href="#">Item3.1</a></li>
-                <li><a href="#">Item3.2</a></li>
-                <li><a href="#">Item3.3</a>
-                  <ul>
-                    <li><a href="#">Item3.3.1</a>
-                      <ul>
-                        <li><a href="#">Item3.3.1.1</a></li>
-                        <li><a href="#">Item3.3.2.2</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Item3.3.2</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Item3.4</a></li>
+                <li><a href="https://lit-element.polymer-project.org/guide/templates">Templates</a></li>
+                <li><a href="https://lit-element.polymer-project.org/guide/styles">Styles</a></li>
+                <li><a href="https://lit-element.polymer-project.org/guide/properties">Properties</a></li>
+                <li><a href="https://lit-element.polymer-project.org/guide/events">Events</a></li>
+                <li><a href="https://lit-element.polymer-project.org/guide/lifecycle">Life cycle</a></li>
               </ul>
             </li>
-            <li><a href="#">Item4</a></li>
+            <li><a href="#">Tools</a>
+              <ul>
+                <li><a href="https://lit-element.polymer-project.org/guide/publish">Publish component</a></li>
+                <li><a href="https://lit-element.polymer-project.org/guide/use">Use a component</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Resources</a>
+              <ul>
+                <li><a href="https://lit-element.polymer-project.org/guide/community">Community</a></li>
+                <li><a href="https://lit-html.polymer-project.org/">lit-html Guides</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
-        <li><a href="https://polymer-library.polymer-project.org/2.0/docs/devguide/shadow-dom"
-            target="_blank">Parent3</a>
-        </li>
-        <li><a href="#">Parent4</a>
+        <li><a href="#">w3schools</a>
           <ul>
-            <li><a href="#">Item1</a></li>
-            <li><a href="#">Item2</a></li>
+            <li><a href="https://www.w3schools.com/html/default.asp">HTML</a></li>
+            <li><a href="https://www.w3schools.com/css/default.asp">CSS</a></li>
+            <li><a href="https://www.w3schools.com/js/default.asp">Javascript</a></li>
+            <li><a href="https://www.w3schools.com/sql/default.asp">SQL</a></li>
+            <li><a href="https://www.w3schools.com/python/default.asp">Python</a></li>
+            <li><a href="https://www.w3schools.com/php/default.asp">PHP</a></li>
+            <li><a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp">Bootstrap</a></li>
           </ul>
         </li>
       </ul>
     </div>
   </gft-tree-view>
+
+
+  <ul class="parent">
+    <li><a href="https://devcode.la/tutoriales/unidades-vh-vw-css/">vh & vw</a>
+    </li>
+    <li><a href="#">LitElement</a>
+      <ul>
+        <li><a href="https://lit-element.polymer-project.org/guide">Introducction</a></li>
+        <li><a href="https://lit-element.polymer-project.org/guide/start">Getting Started</a></li>
+        <li><a href="#">Writing components</a>
+          <ul>
+            <li><a href="https://lit-element.polymer-project.org/guide/templates">Templates</a></li>
+            <li><a href="https://lit-element.polymer-project.org/guide/styles">Styles</a></li>
+            <li><a href="https://lit-element.polymer-project.org/guide/properties">Properties</a></li>
+            <li><a href="https://lit-element.polymer-project.org/guide/events">Events</a></li>
+            <li><a href="https://lit-element.polymer-project.org/guide/lifecycle">Life cycle</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Tools</a>
+          <ul>
+            <li><a href="https://lit-element.polymer-project.org/guide/publish">Publish component</a></li>
+            <li><a href="https://lit-element.polymer-project.org/guide/use">Use a component</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Resources</a>
+          <ul>
+            <li><a href="https://lit-element.polymer-project.org/guide/community">Community</a></li>
+            <li><a href="https://lit-html.polymer-project.org/">lit-html Guides</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#">w3schools</a>
+      <ul>
+        <li><a href="https://www.w3schools.com/html/default.asp">HTML</a></li>
+        <li><a href="https://www.w3schools.com/css/default.asp">CSS</a></li>
+        <li><a href="https://www.w3schools.com/js/default.asp">Javascript</a></li>
+        <li><a href="https://www.w3schools.com/sql/default.asp">SQL</a></li>
+        <li><a href="https://www.w3schools.com/python/default.asp">Python</a></li>
+        <li><a href="https://www.w3schools.com/php/default.asp">PHP</a></li>
+        <li><a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp">Bootstrap</a></li>
+      </ul>
+    </li>
+  </ul>
   <script src="./src/index.js" type="module"></script>
+  <link rel="stylesheet" href="src/utilities/gft-tree-view-styles.css">
 </body>
 
 </html>
